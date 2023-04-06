@@ -3,6 +3,8 @@
 
 def hancurkancandi():
     TODO()
+    test
 
 def ayamberkokok():
     TODO()
+    test
