@@ -29,6 +29,7 @@ def login():
     print("Username tidak terdaftar!")
     return ""
 
+# ini versi ku ye bang
 # import csv
 
 # array = []
