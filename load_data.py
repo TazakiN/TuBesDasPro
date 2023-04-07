@@ -1,6 +1,7 @@
 # load_data.py
 # File ini digunakan untuk meload semua data saat awal memulai program
 
+#import
 from util import *
 
 

@@ -1,10 +1,12 @@
 # roro_jonggrang.py
 # File ini menyimpan fungsi yang hanya bisa digunakan ketika variabel role bernilai roro_jonggrang
 
+# import
+from util import *
+
+
 def hancurkancandi():
-    TODO()
-    test
+    pass
 
 def ayamberkokok():
-    TODO()
-    test
+    pass
