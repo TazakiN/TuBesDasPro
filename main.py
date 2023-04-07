@@ -29,6 +29,46 @@ def login():
     print("Username tidak terdaftar!")
     return ""
 
+# import csv
+
+# array = []
+# with open('user.csv','r') as csv_file :
+#     csv_reader = csv.DictReader(csv_file,delimiter=';')
+#     for row in csv_reader:
+#         array.append(row)
+
+# username_arr = []
+# password_arr = []
+# role_arr = []
+
+# for i in range (len(array)):            
+#     username_arr.append((array[i]['username']))
+#     password_arr.append((array[i]['password']))
+#     role_arr.append((array[i]['role']))
+
+def login():
+    tes = True
+    while True:
+        username = input("Username: ")
+        password = input("Password: ")
+        if username in username_arr and password in password_arr:
+            for i in range(len(array)):
+                if username == username_arr[i] and password == password_arr[i]:
+                    print("Selamat datang, Bandung!\nMasukkan command \"help\" untuk daftar command yang dapat kamu panggil.")
+                    tes = False
+                elif username == username_arr[i] and password != password_arr[i]:
+                    print("Password salah!")
+        elif username not in username_arr and password not in password_arr:
+            print("Username tidak terdaftar dan Password salah!")
+        elif username not in username_arr :
+            print("Username tidak terdaftar!")
+        elif password not in password_arr :
+            print("Password salah!")  
+        if tes == False :
+            break
+login()
+
+
 # Mendefinisikan Fungsi Save
 def save():
     pass
