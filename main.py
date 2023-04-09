@@ -14,61 +14,20 @@ def login():
     # Menerima masukan usernam dan password dari pengguna ke variabel uname dan passs 
     uname = input("Username: ")
     passs = input("Password: ")
-    # Melakukan pengecekan apakah masukan pengguna terdaftar pada "user.csv" atau tidak
-    for satu_user in data_user:
-        if uname == satu_user[0]:
-            if passs == satu_user[1]:
+    # Melakukan pengecekan apakah masukan pengguna terdaftar pada "user.csv" atau tidakl
+    for i in range (lenSendiri(username_arr,102)):
+        if uname == username_arr[i]:
+            if passs == password_arr[i]:
                 print()
                 print("Selamat datang, "+ str(uname)+"!")
                 print("Masukkan command “help” untuk daftar command yang dapat kamu panggil.")
-                return satu_user[2]
+                return role_arr[i]
             else:   # jika password yang dimasukkan salah
                 print("Password salah!")
                 return ""
     # jika username tidak terdapat pada "user.csv"
     print("Username tidak terdaftar!")
     return ""
-
-# ini versi ku ye bang
-# import csv
-
-# array = []
-# with open('user.csv','r') as csv_file :
-#     csv_reader = csv.DictReader(csv_file,delimiter=';')
-#     for row in csv_reader:
-#         array.append(row)
-
-# username_arr = []
-# password_arr = []
-# role_arr = []
-
-# for i in range (len(array)):            
-#     username_arr.append((array[i]['username']))
-#     password_arr.append((array[i]['password']))
-#     role_arr.append((array[i]['role']))
-
-def login():
-    tes = True
-    while True:
-        username = input("Username: ")
-        password = input("Password: ")
-        if username in username_arr and password in password_arr:
-            for i in range(len(array)):
-                if username == username_arr[i] and password == password_arr[i]:
-                    print("Selamat datang, Bandung!\nMasukkan command \"help\" untuk daftar command yang dapat kamu panggil.")
-                    tes = False
-                elif username == username_arr[i] and password != password_arr[i]:
-                    print("Password salah!")
-        elif username not in username_arr and password not in password_arr:
-            print("Username tidak terdaftar dan Password salah!")
-        elif username not in username_arr :
-            print("Username tidak terdaftar!")
-        elif password not in password_arr :
-            print("Password salah!")  
-        if tes == False :
-            break
-login()
-
 
 # Mendefinisikan Fungsi Save
 def save():
