@@ -19,14 +19,14 @@ def login():
         if uname == username_arr[i]:
             if passs == password_arr[i]:
                 print()
-                print("Selamat datang, "+ str(uname)+"!")
+                print("\nSelamat datang, "+ str(uname)+"!")
                 print("Masukkan command “help” untuk daftar command yang dapat kamu panggil.")
                 return role_arr[i]
             else:   # jika password yang dimasukkan salah
-                print("Password salah!")
+                print("\nPassword salah!")
                 return ""
     # jika username tidak terdapat pada "user.csv"
-    print("Username tidak terdaftar!")
+    print("\nUsername tidak terdaftar!")
     return ""
 
 # Mendefinisikan Fungsi Save
