@@ -27,3 +27,4 @@ def lenSendiri(data, N):
         else:
             panjang += 1
     return panjang
+
