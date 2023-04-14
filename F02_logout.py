@@ -1,3 +1,4 @@
 # (F02) Mendefinisikan Fungsi Save
-def logout():
-    pass
+def logout() :
+    role=""
+    return role
