@@ -28,3 +28,6 @@ def lenSendiri(data, N):
             panjang += 1
     return panjang
 
+def appendSendiri(list, x):
+    list = [*list,x]
+    return list
