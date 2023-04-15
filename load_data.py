@@ -4,7 +4,6 @@
 #import
 from util import *
 
-
 # LOADING data dari file "user.csv" ke dalam Array of Array of String dengan nama variabel data_user
 user = open("eksternal/user.csv", 'r')
 data_user = [None for i in range (103)] #Jumlah maksimum isi array data_user adalah 103, indeks 0 adalah "header" csv, indeks 1 adalah bandung bondowoso, indeks 2 adalah roro jonggrang, sisanya ada maksimal 100 jin.
@@ -39,8 +38,6 @@ for baris in candi.readlines():
 
 # Menutup kembali file "candi.csv"
 candi.close()
-
-
 
 # LOADING data dari file "bahan_bangunan.csv" ke dalam Array of Array of String dengan nama variabel data_bahan_bangunan
 bahan_bangunan = open("eksternal/bahan_bangunan.csv", 'r')
