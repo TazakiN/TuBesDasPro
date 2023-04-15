@@ -9,6 +9,7 @@ from commands import *
 # ALGORITMA UTAMA
 # Mendeklarasikan variabel role yang menentukan fungsi yang dapat diakses
 role = ""
+uname = ""
 # Melakukan looping untuk terus meminta prompt
 while True:
     prompt = input(">>> ")
