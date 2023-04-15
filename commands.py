@@ -16,77 +16,74 @@ from F15_help import *
 from F16_exit import *
 
 def run(prompt) -> None:
-    match prompt:
-        case "login":
-            if role == "":
-                role = login() 
-            else:
-                print("Anda harus logout telebih dahulu!")
-        case "logout":
-            role = ""
-        case "summonjin":
-            if role == "bandung_bondowoso":
-                summonjin()
-            else:
-                print("summonjin hanya dapat diakses oleh akun Bandung Bondowoso.")
-        case "hapusjin":
+    if prompt == "login":  
+        role,uname = login(uname) 
+    elif prompt ==  "logout":
+        role = logout()
+        continue
+    elif prompt == "summonjin":
+        if role == "bandung_bondowoso":
+            summonjin()
+        else:
+            print("summonjin hanya dapat diakses oleh akun Bandung Bondowoso.")
+    elif prompt == "hapusjin":
             if role == "bandung_bondowoso":
                 hapusjin()
             else:
                 print("hapusjin hanya dapat diakses oleh akun Bandung Bondowoso.")
-        case "ubahjin":
+    elif prompt == "ubahjin":
             if role == "bandung_bondowoso":
                 ubahjin()
             else:
                 print("ubahjin hanya dapat diakses oleh akun Bandung Bondowoso.")
-        case "bangun":
+    elif prompt == "bangun":
             if role == "jin_pembangun":
                 bangun()
             else:
                 print("bangun hanya dapat diakses oleh akun Jin Pembangun.")
-        case "kumpul":
+    elif prompt == "kumpul":
             if role == "jin_pengumpul":
                 kumpul()
             else:
                 print("kumpul hanya dapat diakses oleh akun Jin Pengumpul.")
-        case "batchkumpul":
+    elif prompt == "batchkumpul":
             if role == "bandung_bondowoso":
                 batchkumpul()
             else:
                 print("batchkumpul hanya dapat diakses oleh akun Bandung Bondowoso.")
-        case "batchbangun":
+    elif prompt == "batchbangun":
             if role == "bandung_bondowoso":
                 batchbangun()
             else:
                 print("batchbangun hanya dapat diakses oleh akun Bandung Bondowoso.")
-        case "laporanjin":
+    elif prompt == "laporanjin":
             if role == "bandung_bondowoso":
                 laporanjin()
             else:
                 print("laporanjin hanya dapat diakses oleh akun Bandung Bondowoso.")
-        case "laporancandi":
+    elif prompt ==  "laporancandi":
             if role == "bandung_bondowoso":
                 laporancandi()
             else:
                 print("laporancandi hanya dapat diakses oleh akun Bandung Bondowoso.")
-        case "hancurkancandi":
+    elif prompt == "hancurkancandi":
             if role == "roro_jonggrang":
                 hancurkancandi()
             else:
                 print("hancurkancandi hanya dapat diakses oleh akun Roro Jonggrang.")
-        case "ayamberkokok":
+    elif prompt == "ayamberkokok":
             if role == "ayamberkokok":
                 ayamberkokok()
             else:
                 print("ayamberkokok hanya dapat diakses oleh akun Roro Jonggrang.")
-        case "save":
+    elif prompt == "save":
             save()
 
-        case "help":
+    elif prompt == "help":
             help()
 
-        case "exit":
+    elif prompt == "exit":
             pass
-
-        case _:
-            print("Command yang dimasukkan tidak valid, ketik help untuk list command yang mungkin")
+    else :
+        print("Command yang dimasukkan tidak valid, ketik help untuk list command yang mungkin")
+        continue
