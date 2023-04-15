@@ -14,7 +14,6 @@ def splitLuSendiri(sebaris, x):
             j+=1
             temp = ""
         else: temp += sebaris[i]
-
     return hasil
 
 # Membuat fungsi setara len() untuk menghitung jumlah indeks yang berisi dari sebuah array yang panjangnya diketahui
@@ -27,7 +26,3 @@ def lenSendiri(data, N):
         else:
             panjang += 1
     return panjang
-
-def appendSendiri(list, x):
-    list = [*list,x]
-    return list
