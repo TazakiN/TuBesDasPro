@@ -14,8 +14,8 @@ def summonjin():
             n = int(input("\nMasukkan nomor jenis jin yang ingin dipanggil: "))
         if 1 <= n <= 2 :
             if n == 1 :
-                jenis_jin = "Pengumpul"
-            else: jenis_jin = "Pembangun"
+                jenis_jin = "jin_pengumpul"
+            else: jenis_jin = "jin_pembangun"
             print(f"\nMemilih jin \"{jenis_jin}\".")
             unamejin = str(input("\nMasukkan username jin: "))
             valid = False
