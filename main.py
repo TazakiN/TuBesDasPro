@@ -2,11 +2,12 @@
 # Menjadi file utama untuk menjalankan program
 
 # import
-from load_data import *     #setelah import load_data.py, kita punya variabel data_user, data_candi, dan data_bahan_bangunan
+from F13_load import load 
 from commands import run
 
 # ALGORITMA UTAMA
-# Mendeklarasikan variabel role yang menentukan fungsi yang dapat diakses
+username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan=load()
+# Mendeklarasikan variabel role_arr yang menentukan fungsi yang dapat diakses
 # Melakukan looping untuk terus meminta prompt
 while True:
     prompt = input(">>> ")
