@@ -1,4 +1,7 @@
 # (F03) Mendefinisikan Fungsi Summon Jin
+from util import *
+from load_data import *
+
 def summonjin():
     global username_arr, password_arr, unamejin, jenis_jin, role_arr
     if lenSendiri(username_arr,102) == 102 :
@@ -31,7 +34,8 @@ def summonjin():
                     if unamejin == username_arr[i] :
                         valid = True
                         break
-                else:valid=False
+                else:
+                    valid = False
             passjin = str(input("Masukkan password jin: "))
             if valid == False :
                 x = len(passjin) 
@@ -47,3 +51,5 @@ def summonjin():
                     break
             print("\nMengumpulkan sesajen...\nMenyerahkan sesajen...\nMembacakan mantra...")
             print(f"\nJin {unamejin} berhasil dipanggil!") 
+    
+
