@@ -1,5 +1,5 @@
 from load_data import *
-def login(uname):
+def login(uname, role):
     if role=="":
         # Menerima masukan usernam dan password dari pengguna ke variabel uname dan passs 
         uname = input("Username: ")

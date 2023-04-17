@@ -1,7 +1,5 @@
-from main import role
-
 # (F15) Mendefinisikan Fungsi Help
-def help():
+def help(role):
     if role == "":
         print("""=========== HELP ===========
 1. login

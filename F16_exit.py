@@ -1,4 +1,4 @@
-from main import role
+from F14_save import save
 # (F16) Mendefinisikan Fungsi Exit
 def exit() :
     inp = input("Apakah Anda mau melakukan penyimpanan file yang sudah diubah? (y/n) ")

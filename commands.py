@@ -15,12 +15,17 @@ from F14_save import *
 from F15_help import *
 from F16_exit import *
 
+role = ""
+uname = ""
+
 def run(prompt) -> None:
+    global role
+    global uname
+
     if prompt == "login":  
-        role,uname = login(uname) 
+        role,uname = login(uname, role) 
     elif prompt ==  "logout":
         role = logout()
-        continue
     elif prompt == "summonjin":
         if role == "bandung_bondowoso":
             summonjin()
@@ -80,11 +85,9 @@ def run(prompt) -> None:
         save()
 
     elif prompt == "help":
-        help()
+        help(role=role)
 
     elif prompt == "exit":
         exit()
-        break
     else :
         print("Command yang dimasukkan tidak valid, ketik help untuk list command yang mungkin")
-        continue
