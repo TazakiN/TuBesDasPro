@@ -10,7 +10,6 @@ from F09_laporanjin import *
 from F10_laporancandi import *
 from F11_hancurkancandi import *
 from F12_ayamberkokok import *
-from F13_load import *
 from F14_save import *
 from F15_help import *
 from F16_exit import *
