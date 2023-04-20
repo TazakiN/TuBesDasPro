@@ -1,17 +1,17 @@
 # (F07) Mendefinisikan Fungsi Kumpul
 from random import randint
-from util import *
-from load_data import *
 
-def kumpul():
-    p = randint(0,5)
-    b = randint(0,5)
-    a = randint(0,5)
-    data_bahan_bangunan[1][2] = int(data_bahan_bangunan[1][2])    
-    data_bahan_bangunan[2][2] = int(data_bahan_bangunan[2][2])
-    data_bahan_bangunan[3][2] = int(data_bahan_bangunan[3][2])
-    data_bahan_bangunan[1][2] += p
-    data_bahan_bangunan[2][2] += b
-    data_bahan_bangunan[3][2] += a
-    print(f"Jin menemukan {p} pasir, {b} batu, dan {a} air.")
+def kumpul(data_bahan_bangunan):
+    
+    # Mendapatkan jumlah pasir, batu, dan air yang terkumpul
+    pasir_terkumpul = randint(0,5)
+    batu_terkumpul = randint(0,5)
+    air_terkumpul = randint(0,5)
+
+    # Merubah data_bahan_bangunan sesuai bahan yang terkumpul
+    data_bahan_bangunan[1][2] = str(int(data_bahan_bangunan[1][2]) + pasir_terkumpul)  
+    data_bahan_bangunan[2][2] = str(int(data_bahan_bangunan[2][2]) + batu_terkumpul)
+    data_bahan_bangunan[3][2] = str(int(data_bahan_bangunan[3][2]) + air_terkumpul)
+
+    print(f"Jin menemukan {pasir_terkumpul} pasir, {batu_terkumpul} batu, dan {air_terkumpul} air.")
     return data_bahan_bangunan

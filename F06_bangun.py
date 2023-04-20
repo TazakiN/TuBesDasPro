@@ -2,7 +2,7 @@
 import random
 
 # (F06) Mendefinisikan Fungsi Bangun
-def bangun(uname, data_bahan_bangunan, data_candi) -> None:
+def bangun(uname, data_bahan_bangunan, data_candi):
     # Mendatkan data banyaknya bahan bangunan dari Array of Array of String data_bahan_bangunan
     sum_pasir = int(data_bahan_bangunan[1][2])
     sum_batu = int(data_bahan_bangunan[2][2])
@@ -30,7 +30,7 @@ def bangun(uname, data_bahan_bangunan, data_candi) -> None:
         for iter in range(101):
             if data_candi[iter] == None:
                 data_candi[iter] = ["" for i in range(5)]
-                data_candi[iter][0] = iter
+                data_candi[iter][0] = str(iter)
                 data_candi[iter][1] = uname
                 data_candi[iter][2] = str(need_bahan[0])
                 data_candi[iter][3] = str(need_bahan[1])
@@ -41,4 +41,5 @@ def bangun(uname, data_bahan_bangunan, data_candi) -> None:
             if iter == 100:
                 print("Candi berhasil dibangun")
                 print("Sisa candi yang perlu dibangun: 0")
+    return data_bahan_bangunan, data_candi
 

@@ -51,9 +51,9 @@ def load():
             i+=1
         # Menutup kembali file "bahan_bangunan.csv"
         bahan_bangunan.close()
-        return username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan
         print("Selamat datang di program Manajerial Candi")
         print("Silakan masukkan username Anda")
+        return username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan
 
 
 
