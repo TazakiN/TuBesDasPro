@@ -5,7 +5,7 @@ def ayamberkokok():
     if lenSendiri(data_candi) == 1 and data_candi[0][0] == 0:
         candiCount = 0
     else:
-        candiCount = lenSendiri(data_candi)
+        candiCount = lenSendiri(data_candi)-1
 
     print("Kukuruyuk.. Kukuruyuk..\n")
     
