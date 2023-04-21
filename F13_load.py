@@ -3,17 +3,21 @@ from util import *
 import argparse
 import os.path
 
-def load():
+def load() -> tuple :
     # Fungsi ini digunakan untuk meload semua data saat awal memulai program
     parser=argparse.ArgumentParser()
-    parser.add_argument("nama_folder", help="Nama folder letak file-file game.")
+    parser.add_argument("nama_folder", help="Nama folder letak file-file game.",nargs="?")
     args = parser.parse_args()
-    if not os.path.isdir(args.nama_folder):
-        print("Folder",args.nama_folder,"tidak ditemukan.")
-    elif args.nama_folder==None:
-        print("Tidak ada nama folder yang diberikan!")
+    if args.nama_folder == None:
+        italic_text = "\x1B[3m" + "python main.py" + "\x1B[0m"
+        print("\nTidak ada nama folder yang diberikan!")
+        print(f"\nUsage: {italic_text} <nama_folder>")
+        return None,None,None,None,None
+    elif not os.path.isdir(args.nama_folder):
+        print(f"\nFolder \"{args.nama_folder}\" tidak ditemukan.")
+        return None,None,None,None,None
     else:
-        print("Loading...")
+        print("\nLoading...")
         # LOADING data dari file "user.csv" ke dalam Array of Array of String dengan nama variabel data_user
         user = open(args.nama_folder+"/user.csv", 'r')
         data_user = [None for i in range (103)] #Jumlah maksimum isi array data_user adalah 103, indeks 0 adalah "header" csv, indeks 1 adalah bandung bondowoso, indeks 2 adalah roro jonggrang, sisanya ada maksimal 100 jin.
@@ -51,11 +55,6 @@ def load():
             i+=1
         # Menutup kembali file "bahan_bangunan.csv"
         bahan_bangunan.close()
-        print("Selamat datang di program Manajerial Candi")
+        print("\nSelamat datang di program Manajerial Candi")
         print("Silakan masukkan username Anda")
         return username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan
-
-
-
-
-
