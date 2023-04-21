@@ -44,22 +44,22 @@ def run(prompt) -> None:
             print("ubahjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "bangun":
         if role == "jin_pembangun":
-            data_bahan_bangunan, data_candi = bangun(uname, data_bahan_bangunan, data_candi)
+            bangun(uname)
         else:
             print("bangun hanya dapat diakses oleh akun Jin Pembangun.")
     elif prompt == "kumpul":
         if role == "jin_pengumpul":
-            data_bahan_bangunan = kumpul(data_bahan_bangunan)
+            kumpul()
         else:
             print("kumpul hanya dapat diakses oleh akun Jin Pengumpul.")
     elif prompt == "batchkumpul":
         if role == "bandung_bondowoso":
-            data_bahan_bangunan = batchkumpul(role_arr, data_bahan_bangunan)
+            batchkumpul()
         else:
             print("batchkumpul hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "batchbangun":
         if role == "bandung_bondowoso":
-            data_bahan_bangunan, data_candi = batchbangun(username_arr, role_arr, data_bahan_bangunan, data_candi)
+            batchbangun()
         else:
             print("batchbangun hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "laporanjin":

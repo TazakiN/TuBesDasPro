@@ -34,6 +34,7 @@ def isibahanbangunan(array):
     array[3] =['Batu','lorem ipsum','0']
     return array
 
+# Untuk menentukan banyak kekurangan bahan pada file F08_batch fungsi batchbangun.
 def kurangBerapa(tersedia, butuh) -> int:
     if tersedia >= butuh:
         return 0
