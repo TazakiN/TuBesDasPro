@@ -51,3 +51,7 @@ for baris in bahan_bangunan.readlines():
 
 # Menutup kembali file "bahan_bangunan.csv"
 bahan_bangunan.close()
+
+# untuk menambah data apabila panjang dari list data_bahan_bangunan kosong
+if lenSendiri(data_bahan_bangunan,1) == 1 :
+    data_bahan_bangunan=isibahanbangunan(data_bahan_bangunan)

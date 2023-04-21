@@ -26,3 +26,17 @@ def lenSendiri(data, N):
         else:
             panjang += 1
     return panjang
+
+# untuk mengisi data di bahan bangunan
+def isibahanbangunan(array):
+    array[1] =['Pasir','lorem ipsum','0']
+    array[2] =['Air','lorem ipsum','0']
+    array[3] =['Batu','lorem ipsum','0']
+    return array
+
+# Untuk menentukan banyak kekurangan bahan pada file F08_batch fungsi batchbangun.
+def kurangBerapa(tersedia, butuh) -> int:
+    if tersedia >= butuh:
+        return 0
+    else:
+        return butuh - tersedia

@@ -20,11 +20,13 @@ uname = ""
 def run(prompt) -> None:
     global role
     global uname
+    global data_candi
+    global data_bahan_bangunan
 
     if prompt == "login":  
         role,uname = login(uname, role) 
     elif prompt ==  "logout":
-        role = logout()
+        role = logout(role)
     elif prompt == "summonjin":
         if role == "bandung_bondowoso":
             summonjin()
@@ -42,7 +44,7 @@ def run(prompt) -> None:
             print("ubahjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "bangun":
         if role == "jin_pembangun":
-            bangun()
+            bangun(uname)
         else:
             print("bangun hanya dapat diakses oleh akun Jin Pembangun.")
     elif prompt == "kumpul":
