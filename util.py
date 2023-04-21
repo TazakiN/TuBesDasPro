@@ -33,3 +33,9 @@ def isibahanbangunan(array):
     array[2] =['Air','lorem ipsum','0']
     array[3] =['Batu','lorem ipsum','0']
     return array
+
+def kurangBerapa(tersedia, butuh) -> int:
+    if tersedia >= butuh:
+        return 0
+    else:
+        return butuh - tersedia

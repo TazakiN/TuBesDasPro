@@ -3,7 +3,7 @@ import random
 
 # (F06) Mendefinisikan Fungsi Bangun
 def bangun(uname, data_bahan_bangunan, data_candi):
-    # Mendatkan data banyaknya bahan bangunan dari Array of Array of String data_bahan_bangunan
+    # Mendapatkan data banyaknya bahan bangunan dari Array of Array of String data_bahan_bangunan
     sum_pasir = int(data_bahan_bangunan[1][2])
     sum_batu = int(data_bahan_bangunan[2][2])
     sum_air = int(data_bahan_bangunan[3][2])
