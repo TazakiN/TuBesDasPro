@@ -12,10 +12,10 @@ def load() -> tuple :
         italic_text = "\x1B[3m" + "python main.py" + "\x1B[0m"
         print("\nTidak ada nama folder yang diberikan!")
         print(f"\nUsage: {italic_text} <nama_folder>")
-        exit()
+        return None,None,None,None,None
     elif not os.path.isdir(args.nama_folder):
         print(f"\nFolder \"{args.nama_folder}\" tidak ditemukan.")
-        exit()
+        return None,None,None,None,None
     else:
         print("\nLoading...")
         # LOADING data dari file "user.csv" ke dalam Array of Array of String dengan nama variabel data_user
