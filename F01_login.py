@@ -1,4 +1,6 @@
 from load_data import *
+from util import *
+
 def login(uname: str, role: str) -> tuple:
     if role != "" :
         print(f"Login gagal!\nAnda telah login dengan username {uname}, silahkan lakukan \"logout\" sebelum melakukan login kembali.")

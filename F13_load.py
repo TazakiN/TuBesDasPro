@@ -23,16 +23,18 @@ def load() -> tuple :
         data_user = [None for i in range (103)] #Jumlah maksimum isi array data_user adalah 103, indeks 0 adalah "header" csv, indeks 1 adalah bandung bondowoso, indeks 2 adalah roro jonggrang, sisanya ada maksimal 100 jin.
         i=0
         for baris in user.readlines():
-            data_user[i] = splitLuSendiri(baris,3)
+            if len(baris)>1:
+                data_user[i] = splitLuSendiri(baris,3)
             i+=1
         # Memisahkan data username, password, dan role ke array masing-masing
         username_arr = [None for i in range(102)] #"Header" csv tidak disimpan, maka jumlah maksimum isi array hanya 102
         password_arr = [None for i in range(102)]
         role_arr = [None for i in range(102)]
-        for i in range (1, lenSendiri(data_user,103)):            
-            username_arr[i-1]=((data_user[i][0]))
-            password_arr[i-1]=((data_user[i][1]))
-            role_arr[i-1]=((data_user[i][2]))
+        for i in range (1, 103): 
+            if data_user[i]!=None:         
+                username_arr[i-1]=((data_user[i][0]))
+                password_arr[i-1]=((data_user[i][1]))
+                role_arr[i-1]=((data_user[i][2]))
         # Menutup kembali file "user.csv"
         user.close()
 
@@ -41,7 +43,8 @@ def load() -> tuple :
         data_candi = [None for i in range (101)] #Jumlah maksimum candi adalah 100, sehingga jumlah maksimum isi array data_candi adalah 101
         i=0
         for baris in candi.readlines():
-            data_candi[i] = splitLuSendiri(baris,5)
+            if len(baris)>1:
+                data_candi[i] = splitLuSendiri(baris,5)
             i+=1
         # Menutup kembali file "candi.csv"
         candi.close()
@@ -51,10 +54,11 @@ def load() -> tuple :
         data_bahan_bangunan = [None for i in range (4)] #Ada 3 jenis bahan bangunan, maka jumlah maksimum isi array data_bahan_bangunan adalah 4
         i=0
         for baris in bahan_bangunan.readlines():
-            data_bahan_bangunan[i] = splitLuSendiri(baris,3)
+            if len(baris)>1:
+                data_bahan_bangunan[i] = splitLuSendiri(baris,3)
             i+=1
         # Menutup kembali file "bahan_bangunan.csv"
         bahan_bangunan.close()
         print("\nSelamat datang di program Manajerial Candi")
-        print("Silakan masukkan username Anda")
+        print("Silakan ketik help untuk list command yang dapat Anda lakukan")
         return username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan

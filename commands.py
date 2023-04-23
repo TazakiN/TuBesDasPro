@@ -17,6 +17,7 @@ from F16_exit import *
 role = ""
 uname = ""
 
+
 def run(prompt) -> None:
     global role
     global uname

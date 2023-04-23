@@ -8,8 +8,10 @@ def splitLuSendiri(sebaris, x):
     temp = ""
     hasil = [None for i in range (x)]
     j=0
-    for i in range(len(sebaris)): #karena len string diperbolehkan
+    for i in range(len(sebaris)):
         if sebaris[i]==';' or i==len(sebaris)-1:
+            if i==len(sebaris)-1 and sebaris[i]!='\n':
+                temp += sebaris[i]
             hasil[j] = temp
             j+=1
             temp = ""
@@ -21,9 +23,7 @@ def lenSendiri(data, N):
     # N adalah panjang dari array
     panjang = 0
     for i in range(N):
-        if data[i]==None:
-            break
-        else:
+        if data[i]!=None:
             panjang += 1
     return panjang
 
