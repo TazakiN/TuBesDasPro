@@ -59,6 +59,13 @@ def load() -> tuple :
             i+=1
         # Menutup kembali file "bahan_bangunan.csv"
         bahan_bangunan.close()
+        
+        if lenSendiri(data_bahan_bangunan,1) == 0 :
+            data_bahan_bangunan=isibahanbangunan(data_bahan_bangunan)
+        
+        if lenSendiri(data_candi,1) == 0 :
+            data_candi=isidatacandi(data_candi)
+            
         print("\nSelamat datang di program Manajerial Candi")
         print("Silakan ketik help untuk list command yang dapat Anda lakukan")
         return username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan
