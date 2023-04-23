@@ -15,3 +15,4 @@ def kumpul():
     data_bahan_bangunan[3][2] = str(int(data_bahan_bangunan[3][2]) + air_terkumpul)
 
     print(f"Jin menemukan {pasir_terkumpul} pasir, {batu_terkumpul} batu, dan {air_terkumpul} air.")
+    return data_bahan_bangunan 
