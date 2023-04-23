@@ -5,8 +5,7 @@ from random import randint
 from util import kurangBerapa
 
 # Mendefinisikan Fungsi Batch Kumpul
-def batchkumpul():
-    global role_arr, data_bahan_bangunan
+def batchkumpul(role_arr, data_bahan_bangunan):
 
     # Menghitung berapa banyak jin_pengumpul yang ada.
     banyak_pengumpul = 0
@@ -38,8 +37,7 @@ def batchkumpul():
         print(f"Mengerahkan {banyak_pengumpul} jin untuk mengumpulkan bahan.")
         print(f"Jin menemukan total {total_pasir} pasir, {total_batu} batu, dan {total_air} air.")
 
-def batchbangun():
-    global username_arr, role_arr, data_bahan_bangunan, data_candi
+def batchbangun(username_arr, role_arr, data_bahan_bangunan, data_candi):
 
     # Menyimpan cadangan data untuk kondisi bangun gagal karena kurang bahan
     data_candi_asli = data_candi
