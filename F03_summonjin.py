@@ -2,8 +2,8 @@
 from util import *
 from load_data import *
 
-def summonjin():
-    global username_arr, password_arr, unamejin, jenis_jin, role_arr
+def summonjin(username_arr, password_arr, role_arr):
+    # global username_arr, password_arr, unamejin, jenis_jin, role_arr
     if lenSendiri(username_arr,102) == 102 :
         print("Jumlah jin telah maksimal! (100 jin). Bandung tidak dapat men-summon lebih dari itu")
     else :
@@ -18,8 +18,11 @@ def summonjin():
         if 1 <= n <= 2 :
             if n == 1 :
                 jenis_jin = "jin_pengumpul"
-            else: jenis_jin = "jin_pembangun"
-            print(f"\nMemilih jin \"{jenis_jin}\".")
+                x = "Pengumpul"
+            else: 
+                jenis_jin = "jin_pembangun"
+                x = "Pembangun"
+            print(f"\nMemilih jin \"{x}\".")
             unamejin = str(input("\nMasukkan username jin: "))
             valid = False
             for i in range(102) :
@@ -27,15 +30,13 @@ def summonjin():
                     valid = True
                     break
             while valid :
-                print(username_arr)
                 print(f"Username \"{unamejin}\" sudah diambil!")
                 unamejin = str(input("\nMasukkan username jin: "))
                 for i in range(102) :
                     if unamejin == username_arr[i] :
                         valid = True
                         break
-                else:
-                    valid = False
+                else:valid=False
             passjin = str(input("Masukkan password jin: "))
             if valid == False :
                 x = len(passjin) 
@@ -51,5 +52,4 @@ def summonjin():
                     break
             print("\nMengumpulkan sesajen...\nMenyerahkan sesajen...\nMembacakan mantra...")
             print(f"\nJin {unamejin} berhasil dipanggil!") 
-    
-
+    return username_arr,password_arr,role_arr
