@@ -60,10 +60,10 @@ def load() -> tuple :
         # Menutup kembali file "bahan_bangunan.csv"
         bahan_bangunan.close()
         
-        if lenSendiri(data_bahan_bangunan,1) == 0 :
+        if lenSendiri(data_bahan_bangunan,1) == 1 :
             data_bahan_bangunan=isibahanbangunan(data_bahan_bangunan)
         
-        if lenSendiri(data_candi,1) == 0 :
+        if lenSendiri(data_candi,1) == 1 :
             data_candi=isidatacandi(data_candi)
             
         print("\nSelamat datang di program Manajerial Candi")
