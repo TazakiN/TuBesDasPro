@@ -21,8 +21,6 @@ uname = ""
 def run(prompt) -> None:
     global role
     global uname
-    global data_candi
-    global data_bahan_bangunan
 
     if prompt == "login":  
         role,uname = login(uname, role) 
@@ -30,7 +28,7 @@ def run(prompt) -> None:
         role = logout(role)
     elif prompt == "summonjin":
         if role == "bandung_bondowoso":
-            summonjin()
+            summonjin(username_arr, password_arr, role_arr)
         else:
             print("summonjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "hapusjin":
@@ -40,12 +38,12 @@ def run(prompt) -> None:
                 print("hapusjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "ubahjin":
         if role == "bandung_bondowoso":
-            ubahjin()
+            ubahjin(username_arr, role_arr)
         else:
             print("ubahjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "bangun":
         if role == "jin_pembangun":
-            bangun(uname)
+            bangun(uname, data_bahan_bangunan, data_candi)
         else:
             print("bangun hanya dapat diakses oleh akun Jin Pembangun.")
     elif prompt == "kumpul":
@@ -55,12 +53,12 @@ def run(prompt) -> None:
             print("kumpul hanya dapat diakses oleh akun Jin Pengumpul.")
     elif prompt == "batchkumpul":
         if role == "bandung_bondowoso":
-            batchkumpul()
+            batchkumpul(role_arr, data_bahan_bangunan)
         else:
             print("batchkumpul hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "batchbangun":
         if role == "bandung_bondowoso":
-            batchbangun()
+            batchbangun(username_arr, role_arr, data_bahan_bangunan, data_candi)
         else:
             print("batchbangun hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "laporanjin":
