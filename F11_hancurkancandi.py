@@ -2,7 +2,7 @@
 def hancurkancandi():
     id = int(input("Masukkan ID candi: "))
 
-    if 0 < id < len(data_candi):
+    if 0 < id < lenSendiri(data_candi):
         verif = input(f"Apakah anda yakin ingin menghancurkan candi ID: {id} (Y/N)?")
         if verif == 'Y' or verif == 'y':
             del data_candi[id] 
