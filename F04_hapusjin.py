@@ -20,6 +20,6 @@ def hapusjin():
             password_arr[index] = None
             print(f"\nJin telah dihapus dari alam gaib.")
             for i in range (1,101):
-                if data_candi != None and data_candi[i][1] == unamejin:
+                if data_candi[i] != None and data_candi[i][1] == unamejin:
                     data_candi[i] = None
         else : print("\nJin tidak dihapus dari alam gaib.")
