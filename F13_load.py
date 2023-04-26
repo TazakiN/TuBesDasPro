@@ -63,8 +63,6 @@ def load() -> tuple :
         if lenSendiri(data_bahan_bangunan,1) == 1 :
             data_bahan_bangunan=isibahanbangunan(data_bahan_bangunan)
         
-        if lenSendiri(data_candi,1) == 1 :
-            data_candi=isidatacandi(data_candi)
             
         print("\nSelamat datang di program Manajerial Candi")
         print("Silakan ketik help untuk list command yang dapat Anda lakukan")
