@@ -6,14 +6,14 @@ def laporancandi():
     total_air = 0
     i = 0
 
-    for i in range (len(data_candi)-1) :
+    for i in range (lenSendiri(data_candi)-1) :
         total_pasir += int(data_candi[i+1][2])
         total_batu += int(data_candi[i+1][3])
         total_air += int(data_candi[i+1][4])
 
     mahal = None
     murah = None
-    for i in range(1, len(data_candi)):
+    for i in range(1, lenSendiri(data_candi)):
         harga = 10000 * int(data_candi[i][2]) + 15000 * int(data_candi[i][3]) + 7500 * int(data_candi[i][4])
         if mahal == None:
             mahal = (data_candi[i][0], harga) # (id, harga)
