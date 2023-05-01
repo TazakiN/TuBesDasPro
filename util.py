@@ -30,8 +30,8 @@ def lenSendiri(data, N):
 # untuk mengisi data di bahan bangunan
 def isibahanbangunan(array : list) -> list:
     array[1] =['Pasir','pasir asli sunagakure','0']
-    array[2] =['Air','batu biasa bukan batu akik','0']
-    array[3] =['Batu','air mata TPB','0']
+    array[2] =['Batu','batu biasa bukan batu akik','0']
+    array[3] =['Air','air mata TPB','0']
     return array
 
 # Untuk menentukan banyak kekurangan bahan pada file F08_batch fungsi batchbangun.
