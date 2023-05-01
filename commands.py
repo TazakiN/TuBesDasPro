@@ -67,12 +67,12 @@ def run(prompt) -> None:
             print("laporanjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt ==  "laporancandi":
         if role == "bandung_bondowoso":
-            laporancandi()
+            laporancandi(data_candi)
         else:
             print("laporancandi hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "hancurkancandi":
         if role == "roro_jonggrang":
-            hancurkancandi()
+            hancurkancandi(data_candi)
         else:
             print("hancurkancandi hanya dapat diakses oleh akun Roro Jonggrang.")
     elif prompt == "ayamberkokok":
@@ -87,6 +87,6 @@ def run(prompt) -> None:
         help(role=role)
 
     elif prompt == "exit":
-        exit()
+        exit(username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan)
     else :
         print("Command yang dimasukkan tidak valid, ketik help untuk list command yang mungkin")

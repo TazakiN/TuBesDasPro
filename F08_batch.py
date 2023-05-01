@@ -75,7 +75,7 @@ def batchbangun(username_arr, role_arr, data_bahan_bangunan, data_candi):
 
                 # Membangun candi pada Array of Array of String data_candi
                 for iter in range(101):
-                    if data_candi[iter] == None:
+                    if data_candi[iter] == "%":
                         # Merubah array data_candi pada index [iter]
                         data_candi[iter] = ["" for i in range(5)]
                         data_candi[iter][0] = str(iter)

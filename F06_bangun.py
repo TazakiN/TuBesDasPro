@@ -1,5 +1,6 @@
 # Import.
 from load_data import *
+from util import *
 from random import randint
 
 # (F06) Mendefinisikan Fungsi Bangun.
@@ -35,9 +36,9 @@ def bangun(uname, data_bahan_bangunan, data_candi) -> None:
 
         # Membangun candi pada Array of Array of String data_candi
         for iter in range(101):
-            if data_candi[iter] == None:
+            if data_candi[iter] == "%":
                 data_candi[iter] = ["" for i in range(5)]
-                data_candi[iter][0] = iter
+                data_candi[iter][0] = str(iter)
                 data_candi[iter][1] = uname
                 data_candi[iter][2] = str(need_bahan[0])
                 data_candi[iter][3] = str(need_bahan[1])
