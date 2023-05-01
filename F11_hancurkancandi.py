@@ -14,7 +14,6 @@ def hancurkancandi(data_candi):
                     if data_candi[j] != "%":
                         data_candi[j-1], data_candi[j] = data_candi[j],data_candi[j-1]
                     else :
-                        print(len(data_candi))
                         data_candi[j], data_candi[j-1] = data_candi[j-1],data_candi[j]
                         return data_candi 
             else : # jika verif != Y
