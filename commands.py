@@ -77,7 +77,7 @@ def run(prompt) -> None:
             print("hancurkancandi hanya dapat diakses oleh akun Roro Jonggrang.")
     elif prompt == "ayamberkokok":
         if role == "roro_jonggrang":
-            ayamberkokok()
+            ayamberkokok(data_candi)
         else:
             print("ayamberkokok hanya dapat diakses oleh akun Roro Jonggrang.")
     elif prompt == "save":
