@@ -1,3 +1,7 @@
+# (F12) Mendefinisikan Fungsi Ayam Berkokok
+from util import *
+from load_data import *
+import sys
 # F12 - Ayam Berkokok
 # Akses : Roro Jongrang
 
@@ -13,13 +17,9 @@ def ayamberkokok():
     for i in range(1,101) :
         if data_candi[i] != "%" :
             if count == 100 : # jika jumlah candi 100 maka Bandung bondowoso memenangkan permainan
-                tes = 0
+                print("Yah, Bandung Bondowoso memenangkan permainan!")
+                sys.exit(1)
             else :
-                tes = 1 # jika jumlah candi < 100 maka roro jonggrang memenangkan permainan
-        else : 
-            pass
-    if tes == 0 :
-        print("Yah, Bandung Bondowoso memenangkan permainan!")
-    else :
-        print("Selamat, Roro Jonggrang memenangkan permainan!\n")
-        print("*Bandung Bondowoso angry noise*\nRoro Jonggrang dikutuk menjadi candi.")
+                print("Selamat, Roro Jonggrang memenangkan permainan!\n")
+                print("*Bandung Bondowoso angry noise*\nRoro Jonggrang dikutuk menjadi candi.") # jika jumlah candi < 100 maka roro jonggrang memenangkan permainan
+                sys.exit(1)
