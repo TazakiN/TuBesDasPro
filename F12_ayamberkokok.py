@@ -1,7 +1,7 @@
 # F12 - Ayam Berkokok
 # Akses : Roro Jongrang
 
-def ayamberkokok():
+def ayamberkokok(data_candi):
     if lenSendiri(data_candi) == 1 and data_candi[0][0] == 0:
         candiCount = 0
     else:
