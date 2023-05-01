@@ -52,12 +52,12 @@ def run(prompt) -> None:
             print("kumpul hanya dapat diakses oleh akun Jin Pengumpul.")
     elif prompt == "batchkumpul":
         if role == "bandung_bondowoso":
-            batchkumpul(role_arr, data_bahan_bangunan)
+            batchkumpul(role_arr)
         else:
             print("batchkumpul hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "batchbangun":
         if role == "bandung_bondowoso":
-            batchbangun(username_arr, role_arr, data_bahan_bangunan, data_candi)
+            batchbangun(username_arr, role_arr)
         else:
             print("batchbangun hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "laporanjin":
