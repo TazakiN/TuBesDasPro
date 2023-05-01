@@ -59,7 +59,7 @@ def save():
     for j in range (1,5):
         line+=";"+data_candi[0][j]
     candi.write(line)
-    for i in range (1,cariindeksterakhir(data_candi,101)):
+    for i in range (1,cariindeksterakhir(data_candi,101)+1):
         candi.write('\n')
         if data_candi[i]!="%":
             line=data_candi[i][0]
@@ -78,9 +78,9 @@ def save():
         bahan.write('\n')
         if data_bahan_bangunan[i]!="%":
             line=data_bahan_bangunan[i][0]
-            for j in range (1,4):
+            for j in range (1,3):
                 line+=";"+data_bahan_bangunan[i][j]
             bahan.write(line)
     bahan.close()
-# stlh save di folder baru, datacandi hilang 1
-# stlh buka file save,bahanbangunan tidak kebaca
+# stlh save di folder bar, datacandi hilang 1
+# stlh bhuka file save,bahanbangunan tidak kebca
