@@ -1,5 +1,5 @@
 # (F11) Mendefinisikan Fungsi Hancurkan Candi
-def hancurkancandi():
+def hancurkancandi(data_candi):
     id = int(input("Masukkan ID candi: "))
 
     if 0 < id < lenSendiri(data_candi):
