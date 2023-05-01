@@ -48,27 +48,28 @@ def load() -> tuple :
                 data_candi[i] = splitLuSendiri(baris,5)
             i+=1
         # Menutup kembali file "candi.csv"
-        print("=====================================")
         candi.close()
 
         # LOADING data dari file "bahan_bangunan.csv" ke dalam Array of Array of String dengan nama variabel data_bahan_bangunan
         bahan_bangunan = open(args.nama_folder+"/bahan_bangunan.csv", 'r')
-        data_bahan_bangunan = ["0" for i in range (4)] #Ada 3 jenis bahan bangunan, maka jumlah maksimum isi array data_bahan_bangunan adalah 4
+        data_bahan_bangunan = ["%" for i in range (4)] #Ada 3 jenis bahan bangunan, maka jumlah maksimum isi array data_bahan_bangunan adalah 4
         i=0
         for baris in bahan_bangunan.readlines():
+            print(baris)
             if len(baris) > 1:
                 data_bahan_bangunan[i] = splitLuSendiri(baris,3)
             i+=1
-        print(data_bahan_bangunan)
 
         # Menutup kembali file "bahan_bangunan.csv"
         bahan_bangunan.close()
         # untuk menambah data apabila panjang dari list data_bahan_bangunan kosong
-        if lenSendiri(data_bahan_bangunan,1) == 1 :
+        if lenSendiri(data_bahan_bangunan,4) == 1 :
             data_bahan_bangunan=isibahanbangunan(data_bahan_bangunan)
 
+        print(role_arr)
+        print (data_candi)
         print(data_bahan_bangunan)
-        print(type(data_candi))
+        print("=====================================")
         print("\nSelamat datang di program Manajerial Candi")
         print("Silakan ketik help untuk list command yang dapat Anda lakukan")
         return username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan

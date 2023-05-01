@@ -21,7 +21,6 @@ uname = ""
 def run(prompt) -> None:
     global role
     global uname
-
     if prompt == "login":  
         role,uname = login(uname, role) 
     elif prompt ==  "logout":
@@ -33,7 +32,7 @@ def run(prompt) -> None:
             print("summonjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "hapusjin":
         if role == "bandung_bondowoso":
-            hapusjin()
+            hapusjin(data_candi, username_arr)
         else:
                 print("hapusjin hanya dapat diakses oleh akun Bandung Bondowoso.")
     elif prompt == "ubahjin":
@@ -82,7 +81,7 @@ def run(prompt) -> None:
         else:
             print("ayamberkokok hanya dapat diakses oleh akun Roro Jonggrang.")
     elif prompt == "save":
-        save()
+        save(username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan)
 
     elif prompt == "help":
         help(role=role)

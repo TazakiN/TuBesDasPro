@@ -1,4 +1,6 @@
 # (F15) Mendefinisikan Fungsi Help
+# fungsi load tidak untuk dipanggil, tolong jangan ditambahkan lagi
+
 def help(role):
     if role == "":
         print("""=========== HELP ===========
@@ -27,11 +29,10 @@ def help(role):
     Untuk menampilkan laporan mengenai progress pembangunan candi
 9. save
     Untuk menyimpan data permainan ke dalam sebuah folder
-10. load
-    Untuk memuat file eksternal ke dalam permainan
-11. exit
+10. exit
     Untuk keluar dari program dan kembali ke terminal
 """)
+
     elif role == "roro_jonggrang":
         print("""=========== HELP ===========
 1. logout
@@ -42,9 +43,7 @@ def help(role):
     Untuk menyelesaikan permainan dengan memalsukan pagi hari
 4. save
     Untuk menyimpan data permainan ke dalam sebuah folder
-5. load
-    Untuk memuat file eksternal ke dalam permainan
-6. exit
+5. exit
     Untuk keluar dari program dan kembali ke terminal
 """)
     elif role == "jin_pengumpul":
@@ -55,9 +54,7 @@ def help(role):
     Untuk mengumpulkan resource candi
 3. save
     Untuk menyimpan data permainan ke dalam sebuah folder
-4. load
-    Untuk memuat file eksternal ke dalam permainan
-5. exit
+4. exit
     Untuk keluar dari program dan kembali ke terminal
 """)
     elif role == "jin_pembangun":
@@ -68,8 +65,6 @@ def help(role):
     Untuk membangun sebuah candi
 3. save
     Untuk menyimpan data permainan ke dalam sebuah folder
-4. load
-    Untuk memuat file eksternal ke dalam permainan
-5. exit
+4. exit
     Untuk keluar dari program dan kembali ke terminal
 """)

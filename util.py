@@ -23,7 +23,7 @@ def lenSendiri(data, N):
     # N adalah panjang dari array
     panjang = 0
     for i in range(N):
-        if data[i]!=None:
+        if data[i]!='%':
             panjang += 1
     return panjang
 
@@ -43,4 +43,4 @@ def kurangBerapa(tersedia, butuh) -> int:
     
 # untuk menghapus sebaris data pada matrix
 def delete(data_candi,index):
-                data_candi = [e for e in data_candi if e != data_candi[index]]
+    data_candi = [e for e in data_candi if e != data_candi[index]]
