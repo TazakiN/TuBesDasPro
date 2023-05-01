@@ -44,3 +44,14 @@ def kurangBerapa(tersedia, butuh) -> int:
 # untuk menghapus sebaris data pada matrix
 def delete(data_candi,index):
     data_candi = [e for e in data_candi if e != data_candi[index]]
+
+def cariindeksterakhir(arr,N):
+#Fungsi ini untuk mencari indeks terakhir yang memiliki isi di sebuah array
+    totalisi=lenSendiri(arr,N)
+    isi=0
+    for i in range(N):
+        if arr[i]!="%":
+            isi+=1
+        if isi==totalisi:
+            break
+    return i

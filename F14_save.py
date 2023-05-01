@@ -3,17 +3,6 @@ from util import *
 import os.path
 from load_data import *
 
-def cariindeksterakhir(arr,N):
-#Fungsi ini untuk mencari indeks terakhir yang memiliki isi di sebuah array
-    totalisi=lenSendiri(arr,N)
-    isi=0
-    for i in range(N):
-        if arr[i]!="%":
-            isi+=1
-        if isi==totalisi:
-            break
-    return i
-
 def save(username_arr,password_arr,role_arr,data_candi,data_bahan_bangunan):
 #Fungsi ini menyimpan data 
     folder=input("\nMasukkan nama folder: ")
