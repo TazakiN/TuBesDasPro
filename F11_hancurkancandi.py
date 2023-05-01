@@ -10,11 +10,7 @@ def hancurkancandi(data_candi):
             if verif == "Y" : 
                 data_candi[i] = "%"   # data_candi dibuat jadi "%" atau dihilangkan
                 print("\nCandi telah berhasil dihancurkan.")
-                for j in range(i+1, 101):  # untuk menggantikan data yang sudah dihilangkan dengan data selanjutnya
-                    if data_candi[j] != "%":
-                        data_candi[i] = data_candi[j]
-                        data_candi[j] = "%"
-                        return data_candi
+                return data_candi
             else : # jika verif != Y
                 print("\nCandi batal dihancurkan.")
                 return data_candi
