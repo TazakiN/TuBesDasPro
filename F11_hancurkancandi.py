@@ -1,13 +1,18 @@
 # (F11) Mendefinisikan Fungsi Hancurkan Candi
-def hancurkancandi(data_candi):
-    id = int(input("Masukkan ID candi: "))
+from util import *
+from load_data import *
 
-    if 0 < id < lenSendiri(data_candi):
-        verif = input(f"Apakah anda yakin ingin menghancurkan candi ID: {id} (Y/N)?")
-        if verif == 'Y' or verif == 'y':
-            delete (data_candi,id)
-            print("\nCandi telah berhasil dihancurkan.")
-        else:
-            print("\nCandi batal dihancurkan.")
-    else :
-        print("\nTidak ada candi dengan ID tersebut.")
+def hancurkancandi(data_candi):
+    id = input("Masukkan ID candi: ") # input
+    for i in range(1,101) :
+        if data_candi[i] != "%" and data_candi[i][0] == id : # mengecek apakah data candi tidak kosong dan terdapat id yang akan dicari dalam data candi
+            verif = input(f"Apakah anda yakin ingin menghancurkan candi ID: {id} (Y/N)? ")
+            if verif == "Y" : 
+                data_candi[i] = "%"   # data_candi dibuat jadi "%" atau dihilangkan
+                print("\nCandi telah berhasil dihancurkan.")
+                return data_candi
+            else : # jika verif != Y
+                print("\nCandi batal dihancurkan.")
+                return data_candi
+    print("\nTidak ada candi dengan tersebut.") # jika tidak terdapat id pada data candi
+    return data_candi
