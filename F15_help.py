@@ -4,8 +4,8 @@ def help(role):
         print("""=========== HELP ===========
 1. login
     Untuk masuk menggunakan akun
-2. save
-    Untuk menyimpan data permainan ke dalam sebuah folder
+2. exit
+    Untuk keluar dari program dan kembali ke terminal
 """)
     elif role == "bandung_bondowoso":
         print("""=========== HELP ===========
@@ -27,8 +27,10 @@ def help(role):
     Untuk menampilkan laporan mengenai progress pembangunan candi
 9. save
     Untuk menyimpan data permainan ke dalam sebuah folder
-10. exit
-    Untuk keluar dari permainan
+10. load
+    Untuk memuat file eksternal ke dalam permainan
+11. exit
+    Untuk keluar dari program dan kembali ke terminal
 """)
     elif role == "roro_jonggrang":
         print("""=========== HELP ===========
@@ -40,28 +42,34 @@ def help(role):
     Untuk menyelesaikan permainan dengan memalsukan pagi hari
 4. save
     Untuk menyimpan data permainan ke dalam sebuah folder
-5. exit
-    Untuk keluar dari permainan
+5. load
+    Untuk memuat file eksternal ke dalam permainan
+6. exit
+    Untuk keluar dari program dan kembali ke terminal
 """)
     elif role == "jin_pengumpul":
         print("""=========== HELP ===========
 1. logout
-   Untuk keluar dari akun yang digunakan sekarang
+    Untuk keluar dari akun yang digunakan sekarang
 2. kumpul
-   Untuk mengumpulkan resource candi
+    Untuk mengumpulkan resource candi
 3. save
     Untuk menyimpan data permainan ke dalam sebuah folder
-4. exit
-    Untuk keluar dari permainan
+4. load
+    Untuk memuat file eksternal ke dalam permainan
+5. exit
+    Untuk keluar dari program dan kembali ke terminal
 """)
     elif role == "jin_pembangun":
         print("""=========== HELP ===========
 1. logout
-   Untuk keluar dari akun yang digunakan sekarang
+    Untuk keluar dari akun yang digunakan sekarang
 2. bangun
-   Untuk membangun sebuah candi
+    Untuk membangun sebuah candi
 3. save
     Untuk menyimpan data permainan ke dalam sebuah folder
-4. exit
-    Untuk keluar dari permainan
+4. load
+    Untuk memuat file eksternal ke dalam permainan
+5. exit
+    Untuk keluar dari program dan kembali ke terminal
 """)

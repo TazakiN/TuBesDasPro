@@ -8,7 +8,7 @@ def cariindeksterakhir(arr,N):
     totalisi=lenSendiri(arr,N)
     isi=0
     for i in range(N):
-        if arr[i]!=None:
+        if arr[i]!="%":
             isi+=1
         if isi==totalisi:
             break
@@ -16,21 +16,23 @@ def cariindeksterakhir(arr,N):
 
 def save():
 #Fungsi ini menyimpan data 
-    folder=input("Masukkan nama folder: ")
-    print("Saving...")
+    folder=input("\nMasukkan nama folder: ")
+    print("\nSaving...")
     if not os.path.isdir("save"):
-        print("Membuat folder save...")
+        print("\nMembuat folder save...")
+        print(f"\nBerhasil menyimpan data di folder save/{folder}!")
         os.mkdir("save")
     if not os.path.isdir("save/"+folder):
         print("Membuat folder save/"+folder)
+        print(f"\nBerhasil menyimpan data di folder {folder}")
         os.mkdir("save/"+folder)
 
     #memasukkan array username, password, dan role ke satu array data_user
-    data_user=[None for i in range (103)]
+    data_user=["%" for i in range (103)]
     data_user[0]=["username","password","role"]
     for i in range (1, 103):
-        if username_arr[i-1]!=None:
-            temparr=[None for i in range (3)]
+        if username_arr[i-1]!="%":
+            temparr=["%" for i in range (3)]
             temparr[0]=username_arr[i-1]
             temparr[1]=password_arr[i-1]
             temparr[2]=role_arr[i-1]
@@ -44,7 +46,7 @@ def save():
     user.write(line)
     for i in range (1,cariindeksterakhir(data_user,103)+1):
         user.write('\n')
-        if data_user[i]!=None:
+        if data_user[i]!="%":
             line=data_user[i][0]
             for j in range (1,3):
                 line+=";"+data_user[i][j]
@@ -59,10 +61,10 @@ def save():
     candi.write(line)
     for i in range (1,cariindeksterakhir(data_candi,101)):
         candi.write('\n')
-        if data_candi[i]!=None:
+        if data_candi[i]!="%":
             line=data_candi[i][0]
             for j in range (1,5):
-                line+=";"+data_candi[i][j]
+                line+=";"+str(data_candi[i][j])
             candi.write(line)
     candi.close()
 
@@ -74,9 +76,11 @@ def save():
     bahan.write(line)
     for i in range (1,4):
         bahan.write('\n')
-        if data_bahan_bangunan[i]!=None:
+        if data_bahan_bangunan[i]!="%":
             line=data_bahan_bangunan[i][0]
-            for j in range (1,3):
+            for j in range (1,4):
                 line+=";"+data_bahan_bangunan[i][j]
             bahan.write(line)
     bahan.close()
+# stlh save di folder baru, datacandi hilang 1
+# stlh buka file save,bahanbangunan tidak kebaca

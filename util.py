@@ -6,7 +6,7 @@
 def splitLuSendiri(sebaris, x):
     # x adalah jumlah kolom di csv
     temp = ""
-    hasil = [None for i in range (x)]
+    hasil = ["%" for i in range (x)]
     j=0
     for i in range(len(sebaris)):
         if sebaris[i]==';' or i==len(sebaris)-1:
@@ -28,10 +28,10 @@ def lenSendiri(data, N):
     return panjang
 
 # untuk mengisi data di bahan bangunan
-def isibahanbangunan(array):
-    array[1] =['Pasir','lorem ipsum','0']
-    array[2] =['Air','lorem ipsum','0']
-    array[3] =['Batu','lorem ipsum','0']
+def isibahanbangunan(array : list) -> list:
+    array[1] =['Pasir','pasir asli sunagakure','0']
+    array[2] =['Air','batu biasa bukan batu akik','0']
+    array[3] =['Batu','air mata TPB','0']
     return array
 
 # Untuk menentukan banyak kekurangan bahan pada file F08_batch fungsi batchbangun.
