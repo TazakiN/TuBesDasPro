@@ -2,7 +2,7 @@ from load_data import *
 from util import *
 
 def login(uname: str, role: str) -> tuple :
-    if role != "" and uname == "%":
+    if role != "" and uname != "":
         print("Login gagal!\nAnda telah login dengan username " + uname +", silahkan lakukan \"logout\" sebelum melakukan login kembali.")
         return role, uname
 
