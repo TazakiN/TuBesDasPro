@@ -63,7 +63,7 @@ def load() -> tuple :
         # Menutup kembali file "bahan_bangunan.csv"
         bahan_bangunan.close()
         # untuk menambah data apabila panjang dari list data_bahan_bangunan kosong
-        if lenSendiri(data_bahan_bangunan,4) == 1 :
+        if lenSendiri(data_bahan_bangunan,4) < 4:
             data_bahan_bangunan=isibahanbangunan(data_bahan_bangunan)
 
         print("=====================================")
