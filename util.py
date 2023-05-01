@@ -40,3 +40,7 @@ def kurangBerapa(tersedia, butuh) -> int:
         return 0
     else:
         return butuh - tersedia
+    
+# untuk menghapus sebaris data pada matrix
+def delete(data_candi,index):
+                data_candi = [e for e in data_candi if e != data_candi[index]]
