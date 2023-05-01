@@ -56,27 +56,16 @@ def batchbangun(username_arr, role_arr,data_bahan_bangunan,data_candi):
         # Mendeklarasikan variabel total kebutuhan untuk masing-masing bahan.
         total_butuh_pasir, total_butuh_batu, total_butuh_air = 0, 0, 0
 
-        all_need_bahan = ["y" for i in range(banyak_pembangun)]
-        # Melakukan looping untuk setiap jin pembangun
-        for index_jin in range(102):
-            if role_arr[index_jin] == "jin_pembangun":
-                # Men-generate angka random untuk menentukan bahan yang dibutuhkan untuk membuat candi.
-                need_bahan = [randint(1,5) for i in range(3)]
-                
-                # Mengurangi bahan yang dimiliki pada variabel sum sesuai kebutuhan bahan
-                total_butuh_pasir += need_bahan[0]
-                total_butuh_batu += need_bahan[1]
-                total_butuh_air += need_bahan[2]
-
-                # Menambah data pada all_need_bahan
-                for p in range(banyak_pembangun):
-                    if all_need_bahan[p] == "y":
-                        all_need_bahan[p] = [0 for i in range(3)]
-                        for j in range(3):
-                            all_need_bahan[p][j] = need_bahan[j]
+        all_need_bahan = [[randint(1,5) for i in range(3)] for i in range(banyak_pembangun)]
+        
+        for i in range(banyak_pembangun):
+            total_butuh_pasir += all_need_bahan[i][0]
+            total_butuh_batu += all_need_bahan[i][1]
+            total_butuh_air += all_need_bahan[i][2]
         
         # Menampilkan berapa banyak Jin Pembangun yang bekerja dan total bahan yang dibutuhkan jika pembangunan dilakukan.
         print(f"Mengerahkan {banyak_pembangun} jin untuk membangun candi dengan total bahan {total_butuh_pasir} pasir, {total_butuh_batu} batu, dan {total_butuh_air} air.")
+        print(all_need_bahan)
 
         if sum_pasir >= total_butuh_pasir and sum_batu >= total_butuh_batu and sum_air >= total_butuh_air: # Jika bahan yang tersedia mencukupi kebutuhan batchbangun.
             print(f"Jin berhasil membangun total {banyak_pembangun}")
@@ -86,28 +75,26 @@ def batchbangun(username_arr, role_arr,data_bahan_bangunan,data_candi):
             data_bahan_bangunan[2][2] = str(sum_batu - total_butuh_batu)
             data_bahan_bangunan[3][2] = str(sum_air - total_butuh_air)
             
-            # Merubah array data candi 
-            for l in range(banyak_pembangun):
-                # mencari nama dari jin pembangun saat ini
-                for f in range(102):
-                    if role_arr[f] == "jin_pembangun":
-                        uname = username_arr[f]
+            jinKe = 0
+            for j in range(102):
+                if role_arr[j] == "jin_pembangun":
+                    uname = username_arr[j]
 
-                        # Membangun candi pada Array of Array of String data_candi
-                        for iter in range(101):
-                            if data_candi[iter] == "%":
-                                # Merubah array data_candi pada index [iter]
-                                data_candi[iter] = ["" for i in range(5)]
-                                data_candi[iter][0] = str(iter)
-                                data_candi[iter][1] = uname
-                                data_candi[iter][2] = str(all_need_bahan[l][0])
-                                data_candi[iter][3] = str(all_need_bahan[l][1])
-                                data_candi[iter][4] = str(all_need_bahan[l][2])
-                                break
-                            if iter == 100: # Ketika array data_candi sudah penuh (berisi 100 candi)
-                                # tidak melakukan perubahan apapun pada array data_candi
-                                break
-                        break
+                    # Membangun candi pada Array of Array of String data_candi
+                    for iter in range(101):
+                        if data_candi[iter] == "%":
+                            # Merubah array data_candi pada index [iter]
+                            data_candi[iter] = ["" for i in range(5)]
+                            data_candi[iter][0] = str(iter)
+                            data_candi[iter][1] = uname
+                            data_candi[iter][2] = str(all_need_bahan[jinKe][0])
+                            data_candi[iter][3] = str(all_need_bahan[jinKe][1])
+                            data_candi[iter][4] = str(all_need_bahan[jinKe][2])
+                            jinKe += 1
+                            break
+                        if iter >= 100: # Ketika array data_candi sudah penuh (berisi 100 candi)
+                            # tidak melakukan perubahan apapun pada array data_candi
+                            break
 
         else:   # Jika bahan yang tersedia tidak mencukupi untuk melakukan batch bangun
             print(f"Bangun gagal. Kurang {kurangBerapa(sum_pasir, total_butuh_pasir)} pasir, {kurangBerapa(sum_batu, total_butuh_batu)} batu, {kurangBerapa(sum_air, total_butuh_air)} air.")
